@@ -2,7 +2,7 @@
   "name": "task1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gpy2020.github.io/",
+  "homepage": "https://gpy2020.github.io/react",
   "dependencies": {
     "@material-ui/core": "^1.4.1",
     "gh-pages": "^1.2.0",
@@ -14,7 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
