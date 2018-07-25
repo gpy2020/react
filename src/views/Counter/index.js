@@ -10,7 +10,7 @@ function counter(props) {
     const {classes} = props;
     return (
     <div>
-        <h1 className={classes.header}>{props.counter}</h1>
+        <h2 className={classes.header}>{props.counter}</h2>
         <div className={classes.buttons}>
             <Button color="secondary" variant="contained" onClick={props.handleDecrease}>-</Button>
             <Button variant="contained" onClick={props.handleReset}>Reset</Button>

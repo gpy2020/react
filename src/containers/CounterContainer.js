@@ -9,7 +9,7 @@ class CounterContainer extends Component {
         counter: 0
       };
     }
-    
+
     handleIncrease = () => {
       this.setState({counter: this.state.counter + 1});
     }
@@ -30,7 +30,7 @@ class CounterContainer extends Component {
                 handleDecrease = {this.handleDecrease}
                 handleIncrease = {this.handleIncrease}
                 handleReset = {this.handleReset}
-            /> 
+            />
     }
   }
   
