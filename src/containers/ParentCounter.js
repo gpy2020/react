@@ -18,7 +18,6 @@ class ParentCounterContainer extends Component {
             let newArray = this.state.counters;
             newArray[i] = <CounterContainer index={i} func={'created'}/>
             this.setState({counters: newArray});
-            console.log('created');
         }
 
         this.setState({
@@ -34,7 +33,6 @@ class ParentCounterContainer extends Component {
             let newArray = this.state.counters;
             newArray[i] = <CounterContainer index={i} func={'removed'}/>
             this.setState({counters: newArray});
-            console.log('removed');
         }
 
         if (this.state.counters.length > 1) {

@@ -24,7 +24,18 @@ class CounterContainer extends Component {
     this.setState({counter: 0});
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdate')
+    if(nextProps.func !== this.props.func || nextState !== this.state) {
+      console.log(`${this.props.index}:component will update`);
+      return true;
+    }
+    console.log(`${this.props.index}:component will not update`);
+    return false;
+  }
+
   UNSAFE_componentWillReceiveProps(nextProps) {
+    console.log('UNSAFE_componentWillReceiveProps')
     switch(nextProps.func) {
       case 'created': {
         if(this.state.counter % 2 === 0) {
