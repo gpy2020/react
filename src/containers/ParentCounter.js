@@ -14,26 +14,41 @@ class ParentCounterContainer extends Component {
     }
 
     handleCreate = () => {
-        console.log(this.props.children);
+        for (let i = 0; i < this.state.counters.length; i++) {
+            let newArray = this.state.counters;
+            newArray[i] = <CounterContainer index={i} func={'created'}/>
+            this.setState({counters: newArray});
+            console.log('created');
+        }
+
         this.setState({
             counters: [...this.state.counters, <CounterContainer index={this.state.index} />],
             counter: this.state.counter + 1,
             index: this.state.index + 1
         });
+        console.log(this.state.counters);
     }
 
     handleRemove = () => {
+        for (let i = 0; i < this.state.counters.length; i++) {
+            let newArray = this.state.counters;
+            newArray[i] = <CounterContainer index={i} func={'removed'}/>
+            this.setState({counters: newArray});
+            console.log('removed');
+        }
+
         if (this.state.counters.length > 1) {
             this.setState({
-                counters: this.state.counters.splice(1, this.state.counters.length - 1),
+                counters: this.state.counters.splice(0, this.state.counters.length - 1),
                 counter: this.state.counter - 1,
+                index: this.state.index - 1
             });
         }
     }
 
     handleReset = () => {
         this.setState({
-            counters: [<CounterContainer index={0} counter={0}/>, ],
+            counters: [<CounterContainer index={0} counter={0} func={'reset'}/>, ],
             counter: 1,
             index: 1,
         });
