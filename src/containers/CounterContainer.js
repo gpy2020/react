@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Counter from '../views/Counter'
 
 class CounterContainer extends Component {
