@@ -52,7 +52,29 @@ class ParentCounterContainer extends Component {
         });
     }
 
+    componentDidMount() {
+        console.log('Parent: componentDidMount');
+      }
+    
+      componentDidUpdate() {
+        console.log('Parent: componentDidUpdate');
+      }
+    
+      componentWillUnmount() {
+        console.log('Parent: componentWillUnmount');
+      }
+
+      componentWillReceiveProps(){
+        console.log('Parent: UNSAFE_componentWillReceiveProps');
+      }
+
+      shouldComponentUpdate() {
+        console.log('Parent: shouldComponentUpdate');
+        return true;
+      }
+
     render() {
+        console.log('Parent: render');
         return <ParentCounter 
                     counter={this.state.counter}
                     counters={this.state.counters}

@@ -24,8 +24,20 @@ class CounterContainer extends Component {
     this.setState({counter: 0});
   }
 
+  componentDidMount() {
+    console.log('Children: componentDidMount');
+  }
+
+  componentDidUpdate() {
+    console.log('Children: componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('Children: componentWillUnmount');
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate')
+    console.log('Children: shouldComponentUpdate');
     if(nextProps.func !== this.props.func || nextState !== this.state) {
       console.log(`${this.props.index}:component will update`);
       return true;
@@ -35,7 +47,7 @@ class CounterContainer extends Component {
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log('UNSAFE_componentWillReceiveProps')
+    console.log('Children: UNSAFE_componentWillReceiveProps');
     switch(nextProps.func) {
       case 'created': {
         if(this.state.counter % 2 === 0) {
@@ -58,6 +70,7 @@ class CounterContainer extends Component {
   }
 
   render() {
+    console.log('Children: render');
     return <Counter 
               counter = {this.state.counter} 
               handleDecrease = {this.handleDecrease}
