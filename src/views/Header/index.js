@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 function header(props) {
@@ -17,4 +17,4 @@ function header(props) {
         </div>
     )
 }
-export default header;
+export default withRouter(header);

@@ -1,9 +1,12 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import { styles } from './style';
 
-function about() {
+function about(props) {
+    const {classes} = props;
     return (
-        <h1>Something about iTechArt</h1>
+        <h1 className={classes.aboutInfo}>Something about iTechArt</h1>
     );
 }
 
-export default about;
+export default withStyles(styles)(about);
