@@ -6,20 +6,18 @@ import HomeContainer from '../../containers/HomeContainer';
 import ErrorContainer from '../../containers/ErrorContainer';
 import HeaderContainer from '../../containers/HeaderContainer';
 
-function Wrapper(Component) { 
-    return class includeHeaderComponent extends React.Component { 
-        render() { 
-            return ( <HeaderContainer> <Component/> </HeaderContainer> ); 
-        } 
-    }; 
+function withRoot(Component) {
+    return function Wrapper() {
+        return ( <HeaderContainer> <Component/> </HeaderContainer> );
+    }
 }
 
 function main() {
     return (
         <Switch>
-            <Route exact path='/counters' component={Wrapper(ParentCounterContainer)}/>
-            <Route exact path='/about' component={Wrapper(AboutContainer)} />
-            <Route exact path='/' component={Wrapper(HomeContainer)}/>
+            <Route exact path='/counters' component={withRoot(ParentCounterContainer)}/>
+            <Route exact path='/about' component={withRoot(AboutContainer)} />
+            <Route exact path='/' component={withRoot(HomeContainer)}/>
             <Route component={ErrorContainer} />
         </Switch>
     )
