@@ -15,15 +15,15 @@ class HeaderContainer extends Component {
         let value;
         console.log(this.props);
         switch (this.props.history.location.pathname) {
-            case '/counters': {
+            case '/react/counters': {
                 value = 1;
                 break;
             }
-            case '/about': {
+            case '/react/about': {
                 value = 0;
                 break;
             }
-            case '/login': {
+            case '/react/login': {
                 value = 2;
                 break;
             }

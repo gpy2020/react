@@ -10,9 +10,9 @@ function header(props) {
         <div>
             <AppBar position="static">
             <Tabs value={props.value} onChange={props.handleChange} centered>
-                <Tab component={Link} to='/about' label='О нас'/>
-                <Tab component={Link} to='/counters' label='Счетчики'/>
-                <Tab component={Link} to='/login' label='LogIn' />
+                <Tab component={Link} to='/react/about' label='О нас'/>
+                <Tab component={Link} to='/react/counters' label='Счетчики'/>
+                <Tab component={Link} to='/react/login' label='LogIn' />
             </Tabs>
             </AppBar>
         </div>

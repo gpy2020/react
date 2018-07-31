@@ -21,7 +21,6 @@ class LoginContainer extends Component {
         const value = event.target.value;
         this.setState({[name]: value},
             () => { this.validateField(name, value) });
-        // console.log(`email: ${this.state.email} password:${this.state.password}`);
     }
 
     validateField(fieldName, value) {

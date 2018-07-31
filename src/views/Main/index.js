@@ -18,10 +18,10 @@ function withRoot(Component) {
 function main() {
     return (
         <Switch>
-            <Route exact path='/counters' component={withRoot(ParentCounterContainer)}/>
-            <Route exact path='/about' component={withRoot(AboutContainer)} />
-            <Route exact path='/' component={withRoot(HomeContainer)} />
-            <Route exact path='/login' component={withRoot(LoginContainer)} />
+            <Route exact path='/react/counters' component={withRoot(ParentCounterContainer)}/>
+            <Route exact path='/react/about' component={withRoot(AboutContainer)} />
+            <Route exact path='/react/' component={withRoot(HomeContainer)} />
+            <Route exact path='/react/login' component={withRoot(LoginContainer)} />
             <Route component={ErrorContainer} />
         </Switch>
     )
