@@ -14,7 +14,6 @@ class HeaderContainer extends Component {
     componentWillMount() {
         let value;
         console.log(this.props);
-        // console.log(this.props.history.location.path);
         switch (this.props.history.location.pathname) {
             case '/counters': {
                 value = 1;
@@ -32,11 +31,6 @@ class HeaderContainer extends Component {
 
         this.setState({value: value});
     }
-    // handleChange = (event, value) => {
-    //     console.log(this.props);
-    //     this.setState({value});
-    //     console.log(`click suka${this.state.value}`);
-    // }
 
     render() {
         return (

@@ -17,9 +17,7 @@ function parentCounter(props) {
                 </div>
             </div>  
             <hr />  
-            <div>
                 {props.counters.map(counter => <div key={counter.index}><CounterContainer counter={counter.counter} func={counter.func} /></div>)}
-            </div>  
         </div> 
     )
 }
