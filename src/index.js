@@ -7,13 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import loginReducer from './containers/reducers/LoginReducer';
-import devToolsEnhancer from 'remote-redux-devtools';
+import { reducer as formReducer } from 'redux-form'
 
 const rootReducer = combineReducers({
     login: loginReducer,
+    form: formReducer,
 })
 
-const store = createStore(rootReducer, devToolsEnhancer());
+const store = createStore(rootReducer);
 
 ReactDOM.render((
     <Provider store={store}>

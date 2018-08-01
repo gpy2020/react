@@ -39,6 +39,7 @@ function loginReducer(state = initialState, action) {
             return {...cloneDeep(state), formValid: action.formValid};
         }
         case actionTypes.SAVE_USER: {
+            console.log(action.user);
             return {...cloneDeep(state), user: action.user};
         }
 

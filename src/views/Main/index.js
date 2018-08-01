@@ -8,6 +8,7 @@ import HeaderContainer from '../../containers/HeaderContainer';
 import LoginContainer from '../../containers/LoginContainer';
 import LoginReduxContainer from '../../containers/LoginReduxContainer';
 import ReduxSuccessContainer from '../../containers/ReduxSuccessContainer';
+import LoginReduxFormContainer from '../../containers/LoginReduxFormContainer';
 
 function withRoot(Component) { 
     return class includeHeaderComponent extends React.Component { 
@@ -26,6 +27,8 @@ function main() {
             <Route exact path='/react/login-redux' component={withRoot(LoginReduxContainer)} />
             <Route exact path='/react/login' component={withRoot(LoginContainer)} />
             <Route exact path='/react/login-redux/success' component={withRoot(ReduxSuccessContainer)}/>
+            <Route exact path='/react/login-redux-form' component={withRoot(LoginReduxFormContainer)} />
+            <Route exact path='/react/login-redux-form/success' component={withRoot(ReduxSuccessContainer)} />
             <Route component={ErrorContainer} />
         </Switch>
     )
