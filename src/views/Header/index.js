@@ -12,8 +12,9 @@ function header(props) {
     return (
             <AppBar className={classes.headerAppBar}>
             <Tabs value={props.value} onChange={props.handleChange} centered>
-                <Tab component={Link} to='/about' label='О нас'/>
-                <Tab component={Link} to='/counters' label='Счетчики'/>
+                <Tab component={Link} to='/react/about' label='О нас'/>
+                <Tab component={Link} to='/react/counters' label='Счетчики'/>
+                <Tab component={Link} to='/react/login' label='LogIn' />
             </Tabs>
             </AppBar>
     )
