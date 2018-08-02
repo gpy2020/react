@@ -7,14 +7,11 @@ const FormErrors = (props) => {
     return (
     <div>
     {Object.keys(props.formErrors).map((fieldName, i) => {
-        if(props.formErrors[fieldName].length > 0){
-        return (
+        return props.formErrors[fieldName].length > 0 ? (
             <p key={i} className={classes.errorMessage} > {fieldName} {props.formErrors[fieldName]}</p>
-        )        
-        } else {
-        return '';
+        ) : '';
         }
-    })}
+    )}
     </div>
     )
 }

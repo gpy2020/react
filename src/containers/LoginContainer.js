@@ -19,8 +19,8 @@ class LoginContainer extends Component {
     handleUserInput = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        this.setState({[name]: value},
-            () => { this.validateField(name, value) });
+        this.setState({[name]: value});
+        this.validateField(name, value);
     }
 
     validateField(fieldName, value) {
@@ -30,7 +30,7 @@ class LoginContainer extends Component {
 
         switch(fieldName) {
             case 'email': {
-                emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+                emailValid = !!value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
                 fieldValidationErrors.email = emailValid ? '' : ' is invalid';
                 break;
             }
@@ -43,12 +43,13 @@ class LoginContainer extends Component {
         this.setState({formErrors: fieldValidationErrors,
             emailValid: emailValid,
             passwordValid: passwordValid
-          }, this.validateForm);
+          });
+        this.validateForm(emailValid, passwordValid);
     }
 
-    validateForm = () => {
-        this.setState({formValid: this.state.emailValid && this.state.passwordValid});
-        console.log(this.state.formValid)
+    validateForm = (emailValid, passwordValid) => {
+        this.setState({formValid: emailValid && passwordValid});
+        console.log(this.state.formValid);
     }
 
     handleSubmit = async (event) => {
