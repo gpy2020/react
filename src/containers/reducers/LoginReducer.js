@@ -1,5 +1,5 @@
 import { cloneDeep } from 'lodash';
-import * as actionTypes from './actions';
+import * as actionTypes from './ActionTypes';
 
 const initialState = {
     user: {email: '', password: ''},

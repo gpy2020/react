@@ -1,0 +1,7 @@
+export const CHANGE_EMAIL = 'CHANGE_EMAIL';
+export const CHANGE_PASSWORD = 'CHANGE_PASSWORD';
+export const VALIDATE_EMAIL = 'VALIDATE_EMAIL';
+export const VALIDATE_PASSWORD = 'VALIDATE_PASSWORD';
+export const FORM_ERRORS = 'FORM_ERRORS';
+export const VALIDATE_FORM = 'VALIDATE_FORM';
+export const SAVE_USER = 'SAVE_USER';
