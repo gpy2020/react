@@ -27,6 +27,11 @@ class HeaderContainer extends Component {
                 value = 2;
                 break;
             }
+            case '/react/login-redux/':
+            case '/react/login-redux/success': {
+                value = 3;
+                break;
+            }
             default: {
                 value = null;
                 break;

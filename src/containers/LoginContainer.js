@@ -76,8 +76,7 @@ class LoginContainer extends Component {
                     formErrors={this.state.formErrors}
                     formValid={this.state.formValid}
                     handleSubmit={this.handleSubmit}
-                    user={this.state.user}
-                />
+                    user={this.state.user} />
     }
 }
 
