@@ -9,7 +9,7 @@ function header(props) {
     return (
         <div>
             <AppBar position="static">
-            <Tabs value={props.value} onChange={props.handleChange} centered>
+            <Tabs value={props.value} onChange={props.handleChange} scrollable>
                 <Tab component={Link} to='/react/about' label='О нас'/>
                 <Tab component={Link} to='/react/counters' label='Счетчики'/>
                 <Tab component={Link} to='/react/login' label='войти' />
