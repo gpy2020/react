@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import * as actionTypes from './reducers/actions';
 import { connect } from 'react-redux';
 import LoginRedux from '../views/LoginRedux';
 import { Redirect } from 'react-router-dom';
+import * as actions from './reducers/Actions';
 
 class LoginReduxContainer extends Component {
 
@@ -84,29 +84,29 @@ const mapDispatchToProps = dispatch => {
         onInputChanged: (name, value) => {
             switch(name) {
                 case 'email': {
-                    dispatch({type: actionTypes.CHANGE_EMAIL, email: value});
+                    dispatch(actions.changeEmail(value));
                     break;
                 }
                 case 'password': {
-                    dispatch({type: actionTypes.CHANGE_PASSWORD, password: value});
+                    dispatch(actions.changePassword(value));
                     break;
                 }
             }
         },
         onValidateEmail: (value) => {
-            dispatch({type: actionTypes.VALIDATE_EMAIL, emailValid: value});
+            dispatch(actions.validateEmail(value));
         },
         onValidatePassword: (value) => {
-            dispatch({type: actionTypes.VALIDATE_PASSWORD, passwordValid: value});
+            dispatch(actions.validatePassword(value));
         },
         onFormErrors: (formErrors) => {
-            dispatch({type: actionTypes.FORM_ERRORS, formErrors: formErrors});
+            dispatch(actions.setFormErrors(formErrors));
         },
         onValidateForm: (value) => {
-            dispatch({type: actionTypes.VALIDATE_FORM, formValid: value});
+            dispatch(actions.validateForm(value));
         },
         onSaveUser: (value) => {
-            dispatch({type: actionTypes.SAVE_USER, user: value});
+            dispatch(actions.saveUser(value));
         }
     }
 }
