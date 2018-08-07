@@ -9,11 +9,12 @@ function header(props) {
     return (
         <div>
             <AppBar position="static">
-            <Tabs value={props.value} onChange={props.handleChange} centered>
+            <Tabs value={props.value} onChange={props.handleChange} scrollable>
                 <Tab component={Link} to='/react/about' label='О нас'/>
                 <Tab component={Link} to='/react/counters' label='Счетчики'/>
                 <Tab component={Link} to='/react/login' label='войти' />
                 <Tab component={Link} to='/react/login-redux/' label='войти с помощью redux'/>
+                <Tab component={Link} to='/react/login-redux-form/' label='Войти с помощью redux-form' />
             </Tabs>
             </AppBar>
         </div>
