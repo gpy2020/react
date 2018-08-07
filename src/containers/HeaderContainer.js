@@ -32,6 +32,11 @@ class HeaderContainer extends Component {
                 value = 3;
                 break;
             }
+            case '/react/login-redux-form/':
+            case '/react/login-redux-form/success': {
+                value = 4;
+                break;
+            }
             default: {
                 value = null;
                 break;
