@@ -16,7 +16,6 @@ class LoginContainer extends Component {
     };
   }
 
-<<<<<<< HEAD
   handleUserInput = event => {
     const name = event.target.name;
     const value = event.target.value;
@@ -24,21 +23,12 @@ class LoginContainer extends Component {
       this.validateField(name, value);
     });
   };
-=======
-    handleUserInput = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        this.setState({[name]: value});
-        this.validateField(name, value);
-    }
->>>>>>> master
 
   validateField(fieldName, value) {
     let fieldValidationErrors = this.state.formErrors;
     let emailValid = this.state.emailValid;
     let passwordValid = this.state.passwordValid;
 
-<<<<<<< HEAD
     switch (fieldName) {
       case "email": {
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
@@ -50,25 +40,6 @@ class LoginContainer extends Component {
         fieldValidationErrors.password = passwordValid ? "" : " is too short";
         break;
       }
-=======
-        switch(fieldName) {
-            case 'email': {
-                emailValid = !!value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-                fieldValidationErrors.email = emailValid ? '' : ' is invalid';
-                break;
-            }
-            case 'password': {
-                passwordValid = value.length >= 6;
-                fieldValidationErrors.password = passwordValid ? '': ' is too short';
-                break;
-            }
-        }
-        this.setState({formErrors: fieldValidationErrors,
-            emailValid: emailValid,
-            passwordValid: passwordValid
-          });
-        this.validateForm(emailValid, passwordValid);
->>>>>>> master
     }
     this.setState(
       {
@@ -80,19 +51,12 @@ class LoginContainer extends Component {
     );
   }
 
-<<<<<<< HEAD
   validateForm = () => {
     this.setState({
       formValid: this.state.emailValid && this.state.passwordValid
     });
     console.log(this.state.formValid);
   };
-=======
-    validateForm = (emailValid, passwordValid) => {
-        this.setState({formValid: emailValid && passwordValid});
-        console.log(this.state.formValid);
-    }
->>>>>>> master
 
   handleSubmit = async event => {
     event.preventDefault();
