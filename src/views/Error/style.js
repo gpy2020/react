@@ -1,5 +1,5 @@
 export const styles = theme => ({
-    errorMessage: {
-        textAlign: 'center'
-    }
+  errorMessage: {
+    textAlign: "center"
+  }
 });
